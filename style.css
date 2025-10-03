@@ -1,0 +1,239 @@
+tml, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #193642, #2b4c58, #335e71, #272626);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #00ffea;
+  transition: background-color 0.5s, color 0.5s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#main-navbar .nav-link:hover,
+#main-navbar .nav-link:focus,
+#main-navbar .nav-link.active {
+  color: #00ffa0;
+  text-shadow: 0 0 12px #00ffa0;
+}
+#main-navbar .navbar-toggler {
+  border-color: #00ff90;
+}
+#main-navbar .navbar-toggler-icon {
+  filter: drop-shadow(0 0 2px #00ff90);
+}
+#main-navbar .navbar-toggler:focus,
+#main-navbar .navbar-toggler:hover {
+  box-shadow: 0 0 8px #00ff90;
+  border-color: #00ff90;
+}
+#carouselExampleDark {
+  max-width: 90vw;
+  width: 100%;
+  margin: 1.5rem auto 0 auto;
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #00ffea88;
+  position: relative;
+}
+#carouselExampleDark .carousel-inner img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  border-radius: 15px;
+}
+#carouselExampleDark:hover .carousel-inner img {
+  transform: scale(1.05);
+}
+#carouselExampleDark .carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 1rem 1.5rem;
+  color: #00ffe0;
+  text-shadow: 0 0 8px #00ffe0;
+  max-width: 70%;
+  left: 15%;
+  bottom: 20px;
+  font-family: 'Consolas', monospace;
+  transition: background 0.3s ease;
+}
+#carouselExampleDark .carousel-indicators [data-bs-target] {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #00ffea88;
+  border: 2px solid #00ffea;
+  margin: 0 6px;
+  transition: background-color 0.3s ease;
+}
+#carouselExampleDark .carousel-indicators .active {
+  background-color: #00ffea;
+  box-shadow: 0 0 8px #00ffea;
+}
+#carouselExampleDark .carousel-control-prev-icon,
+#carouselExampleDark .carousel-control-next-icon {
+  filter: drop-shadow(0 0 3px #00ffea);
+  background-color: rgba(0, 255, 234, 0.7);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#carouselExampleDark .carousel-control-prev-icon:hover,
+#carouselExampleDark .carousel-control-next-icon:hover {
+  background-color: #00ffea;
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px #00ffea);
+}
+#carouselExampleDark .carousel-control-prev,
+#carouselExampleDark .carousel-control-next {
+  cursor: pointer;
+}
+#main-navbar {
+  width: 100vw;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 1030;
+}
+main {
+  flex: 1 0 auto;
+}
+footer {
+  flex-shrink: 0;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease forwards;
+}
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:not(.skills-card):hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+.tech-card {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #00ffea;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffea88;
+  font-family: 'Consolas', 'Courier New', monospace;
+  border: 2px solid #00ffea;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.tech-card h5, .tech-card h4 {
+  color: #00ffc8;
+  text-shadow: 0 0 8px #00ffc8;
+}
+.tech-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  min-height: 120px;
+}
+#typing-text::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+#typing-text {
+  color: #ffffff;
+}
+.skills-card {
+  height: 450px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: #e9ecef !important;
+  border: 1px solid #adb5bd !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transition: box-shadow 0.3s ease !important;
+  margin-bottom: 0 !important;
+  overflow: hidden !important;
+}
+.skills-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+.skills-card img.card-img-top {
+  width: 100% !important;
+  height: 150px !important;
+  max-width: 100% !important;
+  max-height: 150px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 12px 12px 0 0 !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  vertical-align: top !important;
+}
+.skills-card .card-body {
+  flex-grow: 1 !important;
+  overflow: auto !important;
+  padding: 1rem !important;
+  color: #212529 !important;
+  margin: 0 !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.skills-card .card-title {
+  color: #495057 !important;
+  margin-bottom: 0.5rem !important;
+}
+.skills-card .card-text {
+  margin-bottom: 0 !important;
+  flex-grow: 1 !important;
+}
+@media (max-width: 768px) {
+  #carouselExampleDark {
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 1rem 0 0 0 !important;
+  }
+  #carouselExampleDark .carousel-inner img {
+    width: 100vw !important;
+    height: 400px !important;
+  }
+  .skills-card {
+    height: 400px !important;
+    border-radius: 8px !important;
+  }
+  .skills-card img.card-img-top {
+    height: 120px !important;
+    max-height: 120px !important;
+    border-radius: 8px 8px 0 0 !important;
+  }
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
